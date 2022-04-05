@@ -156,7 +156,7 @@ const verificarElementosMatriz = (
   columnasMatriz
 ) => {
   // se verifica que el input no este vacio
-  if (inputMatriz.value === '') {
+  if (inputMatriz.value === '' || inputMatriz.value === 'e') {
     inputMatriz.className = 'form-control border border-danger';
 
     return [
@@ -180,10 +180,10 @@ const verificarElementosMatriz = (
 };
 
 export const multiplicarMatrices = (matriz1, matriz2) => {
-  let matriz3 = [0];
+  let matriz3 = [];
   // se recorre las filas de la matriz 1
   for (let i = 0; i < matriz1.length; i++) {
-    matriz3[i] = [0];
+    matriz3[i] = [];
     // se recorre las filas de la matriz 2
     for (let j = 0; j < matriz2[0].length; j++) {
       matriz3[i][j] = 0;

@@ -74,6 +74,8 @@ const obtenerDatosMatrices = (e) => {
 // funcion para cargar los inputs de las matrices
 
 document.getElementById('btnCalcularMatrices').addEventListener('click', () => {
+  document.getElementById('contenedor-resultado-multiplicacion').innerHTML = '';
+
   // obtener los valores de la matriz 1
   const [estadoMatriz1, resultadoMatriz1] = cargarValoresMatrices(
     datosMatrices,
@@ -109,8 +111,6 @@ document.getElementById('btnCalcularMatrices').addEventListener('click', () => {
 
   generarTablaResultado(resultadoMultiplicacion);
 });
-
-// funcion para generar los inputs para cargar los datos de las matrices
 
 window.addEventListener('DOMContentLoaded', (e) => {
   //   manejando el evento keyup para las filas del input de la matriz 1
